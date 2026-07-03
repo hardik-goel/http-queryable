@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 430" font-family="'SF Mono','DejaVu Sans Mono',Menlo,Consolas,monospace" font-size="14">
+  <rect width="760" height="430" rx="10" fill="#1e2029"/>
+  <circle cx="24" cy="22" r="6" fill="#ff5f56"/>
+  <circle cx="44" cy="22" r="6" fill="#ffbd2e"/>
+  <circle cx="64" cy="22" r="6" fill="#27c93f"/>
+  <text x="380" y="26" fill="#8b8fa3" text-anchor="middle" font-size="12">http-queryable — 30-second demo (static preview)</text>
+  <g>
+    <text x="20" y="66" fill="#7fd1b9">$ npm run demo:serve</text>
+    <text x="20" y="86" fill="#8b8fa3">  5-line Express QUERY endpoint + body-aware cache on :3000</text>
+
+    <text x="20" y="120" fill="#7fd1b9">$ curl -X QUERY /search -d '{"q":"cats"}'</text>
+    <text x="20" y="140" fill="#e6b34d">  X-Query-Cache: MISS</text>
+    <text x="20" y="160" fill="#c8ccd8">  {"query":"cats","results":["result for \"cats\""],"executions":1}</text>
+
+    <text x="20" y="196" fill="#7fd1b9">$ curl -X QUERY /search -d '{ "q" : "cats" }'   # same meaning, re-spaced</text>
+    <text x="20" y="216" fill="#27c93f">  X-Query-Cache: HIT</text>
+    <text x="20" y="236" fill="#8b8fa3">  executions STILL 1  — handler did not re-run</text>
+
+    <text x="20" y="272" fill="#7fd1b9">$ curl -X QUERY /search -d '{"q":"dogs"}'        # DIFFERENT body</text>
+    <text x="20" y="292" fill="#e6b34d">  X-Query-Cache: MISS</text>
+    <text x="20" y="312" fill="#c8ccd8">  {"query":"dogs","results":["result for \"dogs\""],"executions":2}</text>
+
+    <text x="20" y="352" fill="#ff7b72">  A method+URL-only cache would have WRONGLY returned "cats" here.</text>
+    <text x="20" y="376" fill="#7fd1b9">  http-queryable returns the correct "dogs" result. That's the moat.</text>
+    <text x="20" y="404" fill="#5a5f70" font-size="12">  Animated demo.gif: run ./scripts/record-demo.sh (asciinema + agg)</text>
+  </g>
+</svg>

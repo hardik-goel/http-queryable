@@ -88,6 +88,38 @@ them:
   and the response returns — this is the single most valuable pre-launch check
   and can't be done from this repo.
 
+## 6. Repository & governance setup (5 min, one-time)
+
+The community-health files are complete but reference placeholders a human must
+own. Before making the repo public:
+
+- **Repo owner / URLs.** All links assume `github.com/queryable/http-queryable`.
+  If you host elsewhere, find-and-replace the org/repo in `package.json`
+  (`repository`, `homepage`, `bugs`, `funding`), the README badges, `SECURITY.md`,
+  `CONTRIBUTING.md`, and `.github/ISSUE_TEMPLATE/config.yml`.
+- **Contact addresses.** Replace `conduct@queryable.dev` (CODE_OF_CONDUCT.md) and
+  `security@queryable.dev` (SECURITY.md) with real inboxes you monitor.
+- **CODEOWNERS teams.** `.github/CODEOWNERS` references `@queryable/maintainers`
+  and `@queryable/core-maintainers`. Either create those GitHub teams or replace
+  with individual `@handles`, else review assignment will silently no-op.
+- **Enable GitHub features:** Settings → **Private vulnerability reporting** (used
+  by SECURITY.md), and **Discussions** (linked from the issue chooser).
+- **Branch protection** on `main`: require CI + the PR-title check, require review,
+  disallow direct pushes (CONTRIBUTING promises this).
+
+## 7. Publishing automation (3 min, optional)
+
+`.github/workflows/release.yml` publishes on a `vX.Y.Z` tag with **npm
+provenance**. Choose one:
+
+- **Trusted Publishing (recommended):** configure this repo as a trusted
+  publisher on npm (no long-lived token). Provenance works via OIDC.
+- **Token:** add repo secret `NPM_TOKEN` (an npm _automation_ token).
+
+`package.json` already sets `publishConfig.provenance: true` and
+`access: public`. To cut a release: `npm version <patch|minor|major>` → push the
+tag. First release can also be done manually with `npm publish` (step 2).
+
 ---
 
 ### Confirmed complete & tested (no action needed)

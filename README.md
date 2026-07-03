@@ -4,9 +4,12 @@
 `http-queryable` gives you QUERY endpoints **and correct body-aware caching** in a few lines — for Express, Fastify, raw `http`, and an isomorphic browser/Node client.
 
 [![npm](https://img.shields.io/npm/v/http-queryable.svg)](https://www.npmjs.com/package/http-queryable)
-[![CI](https://github.com/queryable/http-queryable/actions/workflows/ci.yml/badge.svg)](https://github.com/queryable/http-queryable/actions)
+[![CI](https://github.com/queryable/http-queryable/actions/workflows/ci.yml/badge.svg)](https://github.com/queryable/http-queryable/actions/workflows/ci.yml)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![node](https://img.shields.io/badge/node-%3E%3D22-brightgreen.svg)](#requirements)
+[![types](https://img.shields.io/badge/types-included-blue.svg)](#api-surface)
+[![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](./CODE_OF_CONDUCT.md)
 
 ![http-queryable 30-second demo](./docs/demo.svg)
 
@@ -191,6 +194,20 @@ correct body-aware **key**.
 - GraphQL-over-QUERY integration.
 - Additional structured body types (XML/CBOR) with conservative canonicalization.
 
+## Contributing & community
+
+Contributions are welcome — bug fixes, adapters, and **conservative** new body
+normalizers especially. Please read:
+
+- [CONTRIBUTING.md](./CONTRIBUTING.md) — dev setup, evals-first testing, Conventional
+  Commits, branch naming, and the DCO sign-off.
+- [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) — Contributor Covenant 2.1.
+- [SECURITY.md](./SECURITY.md) — **report vulnerabilities privately**, never in a
+  public issue. Cache-key collisions are treated as security bugs.
+
+Bugs and features go through the [issue forms](../../issues/new/choose). See the
+[changelog](./CHANGELOG.md) for release history.
+
 ## License
 
-MIT © queryable contributors
+[MIT](./LICENSE) © `http-queryable` contributors

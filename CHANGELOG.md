@@ -7,6 +7,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-07-03
+
+Documentation and packaging polish. No API or runtime changes.
+
+### Changed
+
+- Add a recorded 30-second demo GIF and reference it via an absolute URL so it
+  renders on both GitHub and the npm package page.
+- Point all repository metadata (`repository`, `homepage`, `bugs`, `funding`,
+  README badges) at `github.com/hardik-goel/http-queryable`.
+- Set the package `author` and add a funding link.
+
 ## [0.1.0] - 2026-07-03
 
 Initial release. QUERY (RFC 10008) endpoints + correct body-aware caching for Node.
@@ -38,5 +50,6 @@ Initial release. QUERY (RFC 10008) endpoints + correct body-aware caching for No
 - Dual ESM/CJS build, per-subpath exports, 82 tests including an adversarial
   cache-collision suite.
 
-[unreleased]: https://github.com/hardik-goel/http-queryable/compare/v0.1.0...HEAD
+[unreleased]: https://github.com/hardik-goel/http-queryable/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/hardik-goel/http-queryable/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/hardik-goel/http-queryable/releases/tag/v0.1.0

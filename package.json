@@ -1,6 +1,6 @@
 {
   "name": "http-queryable",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "QUERY endpoints + correct body-aware caching for Node. The new HTTP QUERY method (RFC 10008) made easy and safe — Express, Fastify, raw http, and an isomorphic client.",
   "keywords": [
     "http",

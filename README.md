@@ -11,7 +11,7 @@
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](./CODE_OF_CONDUCT.md)
 
-![http-queryable 30-second demo](./docs/demo.gif)
+![http-queryable 30-second demo](https://raw.githubusercontent.com/hardik-goel/http-queryable/master/docs/demo.gif)
 
 > Same-meaning body (re-spaced) → cache **HIT** and the handler doesn't re-run; a **different** body → the correct **different** result, never a stale hit.
 

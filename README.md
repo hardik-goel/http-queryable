@@ -4,16 +4,16 @@
 `http-queryable` gives you QUERY endpoints **and correct body-aware caching** in a few lines — for Express, Fastify, raw `http`, and an isomorphic browser/Node client.
 
 [![npm](https://img.shields.io/npm/v/http-queryable.svg)](https://www.npmjs.com/package/http-queryable)
-[![CI](https://github.com/hardik-goel/queryable/actions/workflows/ci.yml/badge.svg)](https://github.com/hardik-goel/queryable/actions/workflows/ci.yml)
+[![CI](https://github.com/hardik-goel/http-queryable/actions/workflows/ci.yml/badge.svg)](https://github.com/hardik-goel/http-queryable/actions/workflows/ci.yml)
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE)
 [![node](https://img.shields.io/badge/node-%3E%3D22-brightgreen.svg)](#requirements)
 [![types](https://img.shields.io/badge/types-included-blue.svg)](#api-surface)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](./CONTRIBUTING.md)
 [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](./CODE_OF_CONDUCT.md)
 
-![http-queryable 30-second demo](./docs/demo.svg)
+![http-queryable 30-second demo](./docs/demo.gif)
 
-> _Static preview above. Produce the animated `demo.gif` with `./scripts/record-demo.sh` (one dependency: [asciinema](https://asciinema.org) + [agg](https://github.com/asciinema/agg))._
+> Same-meaning body (re-spaced) → cache **HIT** and the handler doesn't re-run; a **different** body → the correct **different** result, never a stale hit.
 
 ---
 

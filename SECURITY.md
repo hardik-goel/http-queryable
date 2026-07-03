@@ -20,7 +20,7 @@ Security fixes are provided for the latest published minor release line. While
 **Please do not open a public issue for security vulnerabilities.**
 
 Report privately via **GitHub Private Vulnerability Reporting**:
-[open a private advisory](https://github.com/hardik-goel/queryable/security/advisories/new),
+[open a private advisory](https://github.com/hardik-goel/http-queryable/security/advisories/new),
 or on the repository's **Security** tab → **Report a vulnerability**. This creates
 a private report only the maintainers can see, and lets us collaborate on a fix
 (and credit you) before any public disclosure.

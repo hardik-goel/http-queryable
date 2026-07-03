@@ -16,16 +16,15 @@
     "fetch"
   ],
   "license": "MIT",
-  "author": "queryable contributors",
-  "contributors": [],
-  "funding": "https://github.com/hardik-goel/queryable?sponsor=1",
+  "author": "Hardik Goel (https://github.com/hardik-goel)",
+  "funding": "https://buymeacoffee.com/HardikGoel",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/hardik-goel/queryable.git"
+    "url": "git+https://github.com/hardik-goel/http-queryable.git"
   },
-  "homepage": "https://github.com/hardik-goel/queryable#readme",
+  "homepage": "https://github.com/hardik-goel/http-queryable#readme",
   "bugs": {
-    "url": "https://github.com/hardik-goel/queryable/issues"
+    "url": "https://github.com/hardik-goel/http-queryable/issues"
   },
   "publishConfig": {
     "access": "public"

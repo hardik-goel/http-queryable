@@ -61,7 +61,7 @@ representative at an online or offline event.
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
 reported privately to the project maintainer,
 [@hardik-goel](https://github.com/hardik-goel). For sensitive reports you can use
-GitHub's [private vulnerability reporting](https://github.com/hardik-goel/queryable/security/advisories/new)
+GitHub's [private vulnerability reporting](https://github.com/hardik-goel/http-queryable/security/advisories/new)
 as a confidential channel.
 All complaints will be reviewed and investigated promptly and fairly.
 

@@ -38,8 +38,8 @@ Requires **Node >= 22** (QUERY must be accepted by the runtime's HTTP parser —
 see the README). We recommend the version in [`.nvmrc`](./.nvmrc).
 
 ```bash
-git clone https://github.com/hardik-goel/queryable.git
-cd queryable
+git clone https://github.com/hardik-goel/http-queryable.git
+cd http-queryable
 npm install
 
 npm test             # run the vitest suite
@@ -140,8 +140,8 @@ feat(core)!: rename deriveCacheKey option cacheOpaque -> cacheOpaqueBodies
 
 ## Branch naming
 
-- Default branch: **`main`** (protected; no direct pushes).
-- Work on short-lived topic branches off `main`, prefixed by type:
+- Default branch: **`master`** (protected; no direct pushes).
+- Work on short-lived topic branches off `master`, prefixed by type:
 
   ```
   feat/express-cors-preflight
@@ -150,7 +150,7 @@ feat(core)!: rename deriveCacheKey option cacheOpaque -> cacheOpaqueBodies
   chore/bump-tsup
   ```
 
-- Rebase on `main` before opening/refreshing a PR; keep history clean.
+- Rebase on `master` before opening/refreshing a PR; keep history clean.
 
 ## Pull request process
 

@@ -19,14 +19,11 @@ Security fixes are provided for the latest published minor release line. While
 
 **Please do not open a public issue for security vulnerabilities.**
 
-Report privately using one of:
-
-1. **GitHub Private Vulnerability Reporting** (preferred) — on this repository,
-   go to the **Security** tab → **Report a vulnerability**. This opens a private
-   advisory only maintainers can see.
-2. **Email** — **security@queryable.dev** with the details below. Encrypt with
-   our PGP key if the report is sensitive (key fingerprint published on the
-   Security tab).
+Report privately via **GitHub Private Vulnerability Reporting**:
+[open a private advisory](https://github.com/hardik-goel/queryable/security/advisories/new),
+or on the repository's **Security** tab → **Report a vulnerability**. This creates
+a private report only the maintainers can see, and lets us collaborate on a fix
+(and credit you) before any public disclosure.
 
 Include, where possible:
 

@@ -99,10 +99,11 @@ own. Before making the repo public:
   stays `http-queryable`. If you later move the repo, re-run the find-and-replace.
 - **CODEOWNERS.** ✅ Done — `.github/CODEOWNERS` now uses `@hardik-goel` (personal
   repo, no teams). Switch to team handles if you move under an org.
-- **Contact addresses.** Still placeholders: replace `conduct@queryable.dev`
-  (CODE_OF_CONDUCT.md) and `security@queryable.dev` (SECURITY.md) with real
-  inboxes you monitor — or delete the email line and rely on GitHub Private
-  Vulnerability Reporting.
+- **Contact addresses.** ✅ Done — the fake `queryable.dev` emails are removed.
+  Security reports and Code-of-Conduct reports both route through **GitHub
+  Private Vulnerability Reporting** (and the maintainer's profile). To enable it:
+  repo **Settings → Advanced Security → Private vulnerability reporting → Enable**.
+  Optionally add a real monitored email later if you prefer.
 - **Enable GitHub features:** Settings → **Private vulnerability reporting** (used
   by SECURITY.md), and **Discussions** (linked from the issue chooser).
 - **Code of Conduct version.** We ship **Contributor Covenant 2.1** (CC BY 4.0) —

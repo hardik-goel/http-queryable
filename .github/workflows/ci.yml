@@ -65,5 +65,9 @@ jobs:
       - run: npm run build
       - name: Validate publishable package
         run: npx --yes publint@latest
+      - name: Check type resolution (ESM/CJS)
+        # node10 predates "exports"; we require Node >= 22, so ignore its subpath
+        # resolution failures. CJS/ESM/bundler must stay green.
+        run: npx --yes @arethetypeswrong/cli@latest --pack --ignore-rules no-resolution
       - name: Verify tarball contents
         run: npm pack --dry-run

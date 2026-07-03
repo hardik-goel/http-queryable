@@ -104,6 +104,11 @@ own. Before making the repo public:
   with individual `@handles`, else review assignment will silently no-op.
 - **Enable GitHub features:** Settings → **Private vulnerability reporting** (used
   by SECURITY.md), and **Discussions** (linked from the issue chooser).
+- **Code of Conduct version.** We ship **Contributor Covenant 2.1** (CC BY 4.0) —
+  the most widely deployed version across the top npm libraries and the safe
+  professional default. A newer **3.0** exists (released 2025-07-28, CC BY-SA
+  4.0, restorative-justice framing). To adopt it, replace `CODE_OF_CONDUCT.md`
+  with the canonical 3.0 text and bump the README badge from `2.1` to `3.0`.
 - **Branch protection** on `main`: require CI + the PR-title check, require review,
   disallow direct pushes (CONTRIBUTING promises this).
 

@@ -1,9 +1,13 @@
 # Changelog
 
-All notable changes to `http-queryable` are documented here. This project
-follows [Semantic Versioning](https://semver.org/).
+All notable changes to `http-queryable` are documented in this file.
 
-## [0.1.0] — 2026-07-03
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+## [0.1.0] - 2026-07-03
 
 Initial release. QUERY (RFC 10008) endpoints + correct body-aware caching for Node.
 
@@ -34,4 +38,5 @@ Initial release. QUERY (RFC 10008) endpoints + correct body-aware caching for No
 - Dual ESM/CJS build, per-subpath exports, 82 tests including an adversarial
   cache-collision suite.
 
+[unreleased]: https://github.com/queryable/http-queryable/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/queryable/http-queryable/releases/tag/v0.1.0

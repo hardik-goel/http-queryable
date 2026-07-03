@@ -118,6 +118,7 @@ Allowed **types**:
 | `fix`      | patch  | a bug fix                                          |
 | `perf`     | patch  | a performance improvement                          |
 | `docs`     | —      | documentation only                                 |
+| `style`    | —      | formatting / whitespace, no code-meaning change    |
 | `test`     | —      | adding or fixing tests                             |
 | `refactor` | —      | code change that neither fixes a bug nor adds feat |
 | `build`    | —      | build system / dependencies                        |

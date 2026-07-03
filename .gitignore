@@ -11,3 +11,6 @@ demo.cast
 # Internal working docs — kept local, not published
 BUILD_LOG.md
 VERIFY_BEFORE_LAUNCH.md
+
+# Launch / marketing drafts — local only
+launch/

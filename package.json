@@ -18,14 +18,14 @@
   "license": "MIT",
   "author": "queryable contributors",
   "contributors": [],
-  "funding": "https://github.com/queryable/http-queryable?sponsor=1",
+  "funding": "https://github.com/hardik-goel/queryable?sponsor=1",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/queryable/http-queryable.git"
+    "url": "git+https://github.com/hardik-goel/queryable.git"
   },
-  "homepage": "https://github.com/queryable/http-queryable#readme",
+  "homepage": "https://github.com/hardik-goel/queryable#readme",
   "bugs": {
-    "url": "https://github.com/queryable/http-queryable/issues"
+    "url": "https://github.com/hardik-goel/queryable/issues"
   },
   "publishConfig": {
     "access": "public"

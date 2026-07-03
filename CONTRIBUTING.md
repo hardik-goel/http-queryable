@@ -38,8 +38,8 @@ Requires **Node >= 22** (QUERY must be accepted by the runtime's HTTP parser —
 see the README). We recommend the version in [`.nvmrc`](./.nvmrc).
 
 ```bash
-git clone https://github.com/queryable/http-queryable.git
-cd http-queryable
+git clone https://github.com/hardik-goel/queryable.git
+cd queryable
 npm install
 
 npm test             # run the vitest suite

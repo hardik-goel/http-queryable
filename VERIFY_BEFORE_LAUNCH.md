@@ -93,15 +93,16 @@ them:
 The community-health files are complete but reference placeholders a human must
 own. Before making the repo public:
 
-- **Repo owner / URLs.** All links assume `github.com/queryable/http-queryable`.
-  If you host elsewhere, find-and-replace the org/repo in `package.json`
-  (`repository`, `homepage`, `bugs`, `funding`), the README badges, `SECURITY.md`,
-  `CONTRIBUTING.md`, and `.github/ISSUE_TEMPLATE/config.yml`.
-- **Contact addresses.** Replace `conduct@queryable.dev` (CODE_OF_CONDUCT.md) and
-  `security@queryable.dev` (SECURITY.md) with real inboxes you monitor.
-- **CODEOWNERS teams.** `.github/CODEOWNERS` references `@queryable/maintainers`
-  and `@queryable/core-maintainers`. Either create those GitHub teams or replace
-  with individual `@handles`, else review assignment will silently no-op.
+- **Repo owner / URLs.** ✅ Done — all links point at `github.com/hardik-goel/queryable`
+  (`package.json` `repository`/`homepage`/`bugs`/`funding`, README badges,
+  `CONTRIBUTING.md`, `.github/ISSUE_TEMPLATE/config.yml`). The npm package name
+  stays `http-queryable`. If you later move the repo, re-run the find-and-replace.
+- **CODEOWNERS.** ✅ Done — `.github/CODEOWNERS` now uses `@hardik-goel` (personal
+  repo, no teams). Switch to team handles if you move under an org.
+- **Contact addresses.** Still placeholders: replace `conduct@queryable.dev`
+  (CODE_OF_CONDUCT.md) and `security@queryable.dev` (SECURITY.md) with real
+  inboxes you monitor — or delete the email line and rely on GitHub Private
+  Vulnerability Reporting.
 - **Enable GitHub features:** Settings → **Private vulnerability reporting** (used
   by SECURITY.md), and **Discussions** (linked from the issue chooser).
 - **Code of Conduct version.** We ship **Contributor Covenant 2.1** (CC BY 4.0) —

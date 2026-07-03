@@ -2,12 +2,12 @@
 # See https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 
 # Default owners for everything in the repo.
-*                       @queryable/maintainers
+*                       @hardik-goel
 
 # The caching/normalization core is safety-critical — require core owners.
-/src/core/              @queryable/core-maintainers
-/src/cache/             @queryable/core-maintainers
+/src/core/              @hardik-goel
+/src/cache/             @hardik-goel
 
 # Security & governance docs.
-/SECURITY.md            @queryable/maintainers
-/CODE_OF_CONDUCT.md     @queryable/maintainers
+/SECURITY.md            @hardik-goel
+/CODE_OF_CONDUCT.md     @hardik-goel

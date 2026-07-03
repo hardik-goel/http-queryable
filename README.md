@@ -15,6 +15,43 @@
 
 > Same-meaning body (re-spaced) → cache **HIT** and the handler doesn't re-run; a **different** body → the correct **different** result, never a stale hit.
 
+<details>
+<summary><strong>🆕 New to the QUERY method? Understand it in 2 minutes</strong></summary>
+
+<br>
+
+**The problem QUERY solves.** For decades, a "read with a big input" forced a bad choice:
+
+| Method      | Body?                                           | Safe & idempotent?                                     | Cacheable? |
+| ----------- | ----------------------------------------------- | ------------------------------------------------------ | ---------- |
+| `GET`       | ❌ no (cram it into the URL, hit length limits) | ✅ yes                                                 | ✅ yes     |
+| `POST`      | ✅ yes                                          | ❌ no (can't safely retry; caches treat it as a write) | ❌ no      |
+| **`QUERY`** | ✅ **yes**                                      | ✅ **yes**                                             | ✅ **yes** |
+
+**`QUERY` is "GET with a body"** — a body like `POST`, but the semantics of `GET`: safe (no side effects), idempotent (retryable), cacheable. It's built for search / filter / graph-style reads that don't fit in a URL, without abusing `POST`.
+
+```http
+QUERY /search HTTP/1.1
+Content-Type: application/json
+
+{ "q": "cats", "filters": { "color": "black" } }
+```
+
+**Why caching it is the hard part.** Shared HTTP caches key on **method + URL**. With QUERY, many _different_ bodies hit the _same_ URL:
+
+```
+QUERY /search  {"q":"cats"}   → cats results
+QUERY /search  {"q":"dogs"}   → dogs results   ← same URL!
+```
+
+A method+URL cache would happily serve the **cats** response to the **dogs** request. That's a correctness/security bug — [RFC 10008](https://www.rfc-editor.org/info/rfc10008/) §2.7 requires the **request body** to be part of the cache key. `http-queryable` does that **correctly and conservatively**: it only treats bodies as equal when it can _prove_ they mean the same thing.
+
+**The golden rule:** a false cache _miss_ is harmless (you recompute); a false cache _hit_ (two different bodies sharing a key) is a bug — so when in doubt, it caches _less_.
+
+📖 Want the full rationale and the tricky edge cases? Read **[docs/why-query.md](./docs/why-query.md)** (5-min deep dive).
+
+</details>
+
 ---
 
 ## Quickstart — a QUERY endpoint in ~5 lines

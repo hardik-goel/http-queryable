@@ -1,0 +1,40 @@
+name: Release
+
+# Publishes to npm with provenance when a semver tag is pushed (e.g. v0.1.0).
+# Requires the repo secret NPM_TOKEN (an npm automation token) OR npm Trusted
+# Publishing (OIDC) configured for this repo. See VERIFY_BEFORE_LAUNCH.md.
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write # create the GitHub Release
+  id-token: write # npm provenance via OIDC
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22.x
+          registry-url: https://registry.npmjs.org
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run build
+      - run: npm test
+      - name: Publish to npm (with provenance)
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true

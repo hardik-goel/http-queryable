@@ -1,0 +1,13 @@
+# Code owners are requested for review automatically on matching paths.
+# See https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repo.
+*                       @queryable/maintainers
+
+# The caching/normalization core is safety-critical — require core owners.
+/src/core/              @queryable/core-maintainers
+/src/cache/             @queryable/core-maintainers
+
+# Security & governance docs.
+/SECURITY.md            @queryable/maintainers
+/CODE_OF_CONDUCT.md     @queryable/maintainers

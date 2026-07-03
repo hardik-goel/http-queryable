@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 🔒 Report a security vulnerability
+    url: https://github.com/queryable/http-queryable/security/policy
+    about: Please disclose security issues privately — never in a public issue.
+  - name: 💬 Questions & discussions
+    url: https://github.com/queryable/http-queryable/discussions
+    about: Ask usage questions or discuss ideas before filing an issue.
+  - name: 📖 RFC 10008 (the QUERY method)
+    url: https://www.rfc-editor.org/
+    about: The standard this package implements.

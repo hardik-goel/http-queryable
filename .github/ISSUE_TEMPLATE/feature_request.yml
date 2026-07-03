@@ -1,0 +1,52 @@
+name: 💡 Feature request
+description: Suggest an enhancement for http-queryable
+title: "feat: <short description>"
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea! Please keep in mind the project's tight v0.1 scope
+        (see the README roadmap): no CDN product, no cache-backend empire, no
+        GraphQL-over-QUERY in core. Conservative, safety-preserving additions are
+        most welcome.
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight checklist
+      options:
+        - label: I searched existing issues and discussions for this idea.
+          required: true
+        - label: This fits the project scope (or I explain below why it should expand it).
+          required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / motivation
+      description: What are you trying to do that's hard or impossible today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: What would the API or behavior look like? Sketch the ideal usage.
+      render: js
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+    validations:
+      required: false
+  - type: dropdown
+    id: contribute
+    attributes:
+      label: Would you be willing to contribute this?
+      options:
+        - "Yes, I can open a PR"
+        - "Yes, with guidance"
+        - "No, requesting only"
+    validations:
+      required: true

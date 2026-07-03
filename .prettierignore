@@ -1,0 +1,7 @@
+dist/
+coverage/
+node_modules/
+*.cast
+demo.gif
+CHANGELOG.md
+package-lock.json

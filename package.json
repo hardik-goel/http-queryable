@@ -1,0 +1,114 @@
+{
+  "name": "http-queryable",
+  "version": "0.1.0",
+  "description": "QUERY endpoints + correct body-aware caching for Node. The new HTTP QUERY method (RFC 10008) made easy and safe — Express, Fastify, raw http, and an isomorphic client.",
+  "keywords": [
+    "http",
+    "query",
+    "query-method",
+    "rfc10008",
+    "express",
+    "fastify",
+    "cache",
+    "caching",
+    "safe-method",
+    "idempotent",
+    "fetch"
+  ],
+  "license": "MIT",
+  "author": "queryable contributors",
+  "contributors": [],
+  "funding": "https://github.com/queryable/http-queryable?sponsor=1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/queryable/http-queryable.git"
+  },
+  "homepage": "https://github.com/queryable/http-queryable#readme",
+  "bugs": {
+    "url": "https://github.com/queryable/http-queryable/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./express": {
+      "types": "./dist/express/index.d.ts",
+      "import": "./dist/express/index.js",
+      "require": "./dist/express/index.cjs"
+    },
+    "./fastify": {
+      "types": "./dist/fastify/index.d.ts",
+      "import": "./dist/fastify/index.js",
+      "require": "./dist/fastify/index.cjs"
+    },
+    "./http": {
+      "types": "./dist/http/index.d.ts",
+      "import": "./dist/http/index.js",
+      "require": "./dist/http/index.cjs"
+    },
+    "./client": {
+      "types": "./dist/client/index.d.ts",
+      "import": "./dist/client/index.js",
+      "require": "./dist/client/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "demo:serve": "node scripts/demo-server.mjs"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.18.0",
+    "@typescript-eslint/parser": "^8.18.0",
+    "@vitest/coverage-v8": "^2.1.8",
+    "eslint": "^8.57.1",
+    "express": "^5.1.0",
+    "fastify": "^5.2.0",
+    "prettier": "^3.4.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "peerDependencies": {
+    "express": ">=4.17.0",
+    "fastify": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "express": {
+      "optional": true
+    },
+    "fastify": {
+      "optional": true
+    }
+  }
+}

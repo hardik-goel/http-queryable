@@ -1,0 +1,14 @@
+# Normalize line endings to LF in the repo.
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.gif binary
+*.svg text
+*.cast binary
+
+# Collapse generated/vendored files in diffs and language stats.
+package-lock.json linguist-generated=true
+dist/** linguist-generated=true
+coverage/** linguist-generated=true
+docs/demo.svg linguist-documentation=true

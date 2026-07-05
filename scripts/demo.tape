@@ -10,6 +10,8 @@ Set Padding 20
 Set Theme "Dracula"
 Set TypingSpeed 20ms
 Set PlaybackSpeed 1.0
+Set Framerate 15
+# 15fps keeps the frame count well under dev.to's 500-frame upload limit.
 
 Hide
 Type "cd $(git rev-parse --show-toplevel) && PORT=3000 node scripts/demo-server.mjs >/tmp/hq-demo.log 2>&1 &" Enter
